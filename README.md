@@ -1,7 +1,6 @@
-# README
+# Intro
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+What's for dinner tonight? What do you have in your fridge? MyRecipe app will allow the user to search for recipes based on their ingredients.
 
 Things you may want to cover:
 
