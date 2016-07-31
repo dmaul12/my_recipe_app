@@ -19,10 +19,13 @@ function renderRecipe( recipe ) {
   var $recipe = $('<li class="recipe">');
   var $name = $('<a target="_blank" href="' + recipe.href + '">')
   $name.text( recipe.title );
+  var $ing = $('<li>').text(recipe.ingredients)
+
   var $img = $('<img>').attr('src', recipe.thumbnail)
-  // render the image
+
   $recipe.append( $name );
   $recipe.append($img);
+  $recipe.append($ing);
   $container.append( $recipe );
 }
 
