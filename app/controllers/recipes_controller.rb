@@ -1,4 +1,6 @@
 class RecipesController < ApplicationController
+
+
     def index
     url = "http://www.recipepuppy.com/api/?i=onions,garlic&q=omelet&p=3"
     response = HTTParty.get(url)

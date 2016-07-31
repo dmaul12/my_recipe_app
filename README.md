@@ -16,3 +16,4 @@ What's for dinner tonight? What do you have in your fridge? MyRecipe app will al
 * [Recipe Puppy] (http://www.recipepuppy.com/api/)
 
 # Wireframes
+![Alt text](app/assets/images/wireframe.png)
