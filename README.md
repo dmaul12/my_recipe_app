@@ -2,23 +2,17 @@
 
 What's for dinner tonight? What do you have in your fridge? MyRecipe app will allow the user to search for recipes based on their ingredients.
 
-Things you may want to cover:
+# User Stories
+* Guests
+ * Guest can search recipes based on ingredients
+ * Guest can view all the recipes 
+ * Guest can search for recipes 
+ 
+# Technologies Used
+* Ruby
+* Httparty
 
-* Ruby version
+# API Used
+* [Recipe Puppy] (http://www.recipepuppy.com/api/)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# my_recipe_app
+# Wireframes
