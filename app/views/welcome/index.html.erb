@@ -1,4 +1,5 @@
 <h1>Cook It!</h1>
+<body>
 <header>
   <div class="ingredients-img">
     <img src="http://www.culinaryinspo.com/wp-content/uploads/2014/09/Nicoise-Ingredients.jpg" alt="" />
@@ -8,31 +9,26 @@
       <p>Welcome to Cook It! The place where you can find all the recipes based on the ingredients you have available. You give us the ingredients and we will come up with the recipes!</p>
 
   </div>
-
 </header>
 
-  <%= form_tag("/recipes", method:"get") do %>
-  <%= label_tag(:ingredients, "Items:") %>
-  <%= text_field_tag(:ingredients) %>
-  <%= label_tag(:recipe, "Whatever Recipe:") %>
-  <%= text_field_tag(:recipe) %>
-  <%= submit_tag "Search"%>
-  <% end %>
-
+<div id='enter-info'>Enter as many ingredients you wish. Just place a comma after each ingredient</div>
 <div id="stock">
+
 <form>
-  <input name="items" type="text" placeholder="Items in stock">
+  <input id="items" name="items" type="text" placeholder="Items to use">
   <input type="submit" value="SUBMIT">
 </form>
 
 </div>
+<h3>Recipes</h3>
 <div id="recipes-container">
-  <h3>Recipes</h3>
+
+
 
   <ul id="recipes">
     <!--  recipe will be rendered -->
   </ul>
 
 </div>
-
+</body>
 

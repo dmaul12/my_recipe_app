@@ -7,12 +7,48 @@
 }
 
 #recipes {
-  color:grey
-
+  color:grey;
+  margin-top: 300px;
 }
 
-#stock {
-  float: right;
+form {
+  float: left;
+  margin-top: 100px;
+  margin-left: 30px;
+
+}
+#enter-info{
+  margin-top: 70px;
+}
+input{
+  background-color: #D4D9D9;
+  color: black;
 }
 
+img {
+    display: block;
+    margin: 0 auto;
+}
 
+body{
+  background-color:#e6e6e6;
+}
+
+h1 {
+  text-align: center;
+  font-family: Georgia;
+  font-weight: heavy;
+}
+h3{
+  float: left;
+  margin-top: 200px;
+}
+
+p {
+  margin: 0 auto;
+  margin-top: 80px;
+  font-family: Verdana;
+  color: #222222;
+  line-height: 14pt;
+  width: 330pt;
+}

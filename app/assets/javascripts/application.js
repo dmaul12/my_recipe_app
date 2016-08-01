@@ -16,29 +16,32 @@
 
 function renderRecipe( recipe ) {
   var $container = $('#recipes');
-  var $recipe = $('<li class="recipe">');
-  var $name = $('<a target="_blank" href="' + recipe.href + '">')
+  var $recipe    = $('<li class="recipe">');
+  var $name      = $('<a target="_blank" href="' + recipe.href + '">')
   $name.text( recipe.title );
-  var $ing = $('<li>').text(recipe.ingredients)
 
-  var $img = $('<img>').attr('src', recipe.thumbnail)
+  var $ing       = $('<li>').text(recipe.ingredients)
+  var $img       = $('<img>').attr('src', recipe.thumbnail)
 
   $recipe.append( $name );
   $recipe.append($img);
-  $recipe.append('Ingredients',$ing);
+  $recipe.append($ing);
   $container.append( $recipe );
 }
 
-function getRecipes() {
-  $.getJSON('/recipes').done(function( recipes ) {
+function getRecipes(event) {
+  event.preventDefault()
+  var $items    = $('#items').val()
+  $.getJSON('/recipes',{ingredients:$items}).done(function( recipes ) {
     recipes.results.forEach(function( recipe ) {
       renderRecipe( recipe );
     })
   })
 }
 
-
-
 $(function() {
-  getRecipes();
+  var $form     = $('form')
+  $form.submit(getRecipes);
 })
+
+
