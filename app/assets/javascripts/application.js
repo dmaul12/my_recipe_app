@@ -25,7 +25,7 @@ function renderRecipe( recipe ) {
 
   $recipe.append( $name );
   $recipe.append($img);
-  $recipe.append($ing);
+  $recipe.append('Ingredients',$ing);
   $container.append( $recipe );
 }
 

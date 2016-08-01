@@ -1,7 +1,5 @@
 class RecipesController < ApplicationController
 
-# var items = onions
-
     def index
     url = "http://www.recipepuppy.com/api/?i=#{params[:ingredients]}&q=#{params[:recipe]}"
     response = HTTParty.get(url)

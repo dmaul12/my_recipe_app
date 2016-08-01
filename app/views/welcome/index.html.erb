@@ -1,18 +1,17 @@
-<h1>What to Cook</h1>
+<h1>Cook It!</h1>
 <header>
   <div class="ingredients-img">
     <img src="http://www.culinaryinspo.com/wp-content/uploads/2014/09/Nicoise-Ingredients.jpg" alt="" />
   </div>
   <div class="about-page">
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus ut eveniet veritatis saepe dicta iure, doloremque neque, vero, non eligendi nam exercitationem expedita harum animi pariatur? Voluptas cumque vitae veritatis!</p>
-
-
+      <p>Welcome to Cook It! The place where you can find all the recipes based on the ingredients you have available. You give us the ingredients and we will come up with the recipes!</p>
 
   </div>
 
 </header>
-<%= form_tag("/recipes", method:"get") do %>
+
+  <%= form_tag("/recipes", method:"get") do %>
   <%= label_tag(:ingredients, "Items:") %>
   <%= text_field_tag(:ingredients) %>
   <%= label_tag(:recipe, "Whatever Recipe:") %>
@@ -20,9 +19,13 @@
   <%= submit_tag "Search"%>
   <% end %>
 
-<% if @result.present? %>
-<%render 'index' %>
-<% end %>
+<div id="stock">
+<form>
+  <input name="items" type="text" placeholder="Items in stock">
+  <input type="submit" value="SUBMIT">
+</form>
+
+</div>
 <div id="recipes-container">
   <h3>Recipes</h3>
 
@@ -33,6 +36,3 @@
 </div>
 
 
-<%= form_tag({}, {:method => :get}) do %>
-  <%= select_tag :new_locale, options_for_select(I18n.available_locales, I18n.locale), :onchange => "this.form.submit();" %>
-<% end %>
